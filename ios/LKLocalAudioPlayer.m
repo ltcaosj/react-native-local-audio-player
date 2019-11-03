@@ -1,14 +1,20 @@
-#import "LKLocalAudioPlayer.h"
+#import <Foundation/Foundation.h>
 
+#import "React/RCTBridgeModule.h"
+#import "React/RCTEventEmitter.h"
 
-@implementation LKLocalAudioPlayer
+@interface RCT_EXTERN_MODULE(LKLocalAudioPlayer, RCTEventEmitter)
 
-RCT_EXPORT_MODULE()
-
-RCT_EXPORT_METHOD(sampleMethod:(NSString *)stringArgument numberParameter:(nonnull NSNumber *)numberArgument callback:(RCTResponseSenderBlock)callback)
-{
-    // TODO: Implement some actually useful functionality
-	callback(@[[NSString stringWithFormat: @"numberArgument: %@ stringArgument: %@", numberArgument, stringArgument]]);
-}
-
+RCT_EXTERN_METHOD(
+                  playSound:(NSString *)filePath
+                  callback: (RCTResponseSenderBlock)callback
+                  )
+RCT_EXTERN_METHOD(
+                  supportAudioInSilentMode
+                  )
+RCT_EXTERN_METHOD(
+                  stopAudio
+                  )
 @end
+
+
