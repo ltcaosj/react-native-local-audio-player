@@ -41,3 +41,5 @@ import LKLocalAudioPlayer from 'react-native-local-audio-player';
 // TODO: What to do with the module?
 LKLocalAudioPlayer;
 ```
+## Create module command
+create-react-native-module local-audio-player --prefix LK --package-identifier lightkits.localaudioplayer
