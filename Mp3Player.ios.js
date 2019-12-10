@@ -9,6 +9,12 @@ const Mp3Player = {
   stop() {
     LKLocalAudioPlayer.stopAudio();
   },
+  pause() {
+    LKLocalAudioPlayer.pauseAudio();
+  },
+  resume() {
+    LKLocalAudioPlayer.resumeAudio();
+  },
 };
 
 LKLocalAudioPlayer.supportAudioInSilentMode();

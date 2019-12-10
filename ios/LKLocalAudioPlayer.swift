@@ -41,6 +41,16 @@ class LKLocalAudioPlayer: RCTEventEmitter, AVAudioPlayerDelegate {
   func stopAudio(){
     self.avPlayer?.stop()
   }
+
+  @objc
+  func pauseAudio(){
+    self.avPlayer?.pause()
+  }
+
+  @objc
+  func resumeAudio(){
+   self.avPlayer?.play()
+  }
   
   @objc func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
     sendEvent(withName: "onSoundFinishedPlaying", body: [])

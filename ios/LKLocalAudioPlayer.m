@@ -15,6 +15,12 @@ RCT_EXTERN_METHOD(
 RCT_EXTERN_METHOD(
                   stopAudio
                   )
+RCT_EXTERN_METHOD(
+pauseAudio
+)
+RCT_EXTERN_METHOD(
+resumeAudio
+)
 @end
 
 

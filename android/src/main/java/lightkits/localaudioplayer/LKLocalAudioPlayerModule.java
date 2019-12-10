@@ -45,6 +45,20 @@ public class LKLocalAudioPlayerModule extends ReactContextBaseJavaModule {
             mediaPlayer.stop();
         }
     }
+
+    @ReactMethod
+    public void pauseAudio() {
+        if(mediaPlayer != null){
+            mediaPlayer.pause();
+        }
+    }
+
+    @ReactMethod
+    public void resumeAudio() {
+        if(mediaPlayer != null){
+            mediaPlayer.start();
+        }
+    }
     @ReactMethod
     public void playSound(String url, final Callback onCompleted) {
         this.stopAudio();
